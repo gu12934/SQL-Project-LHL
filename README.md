@@ -33,7 +33,7 @@ data normalization (changing data type)
 duplicate data
 data transformations
 
-###Nex steps
+### Next steps
 startingwithquestions.md file
 startingwithdata.md file
 QA.md file
