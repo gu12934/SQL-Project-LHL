@@ -1,7 +1,12 @@
 # Final-Project-Transforming-and-Analyzing-Data-with-SQL
 
 ## Project/Goals
-(fill in your description and goals here)
+In this project, we will combine and practice implementing what we have learned throughout this course, including:
+
+Extracting data from a SQL database
+Cleaning, transforming and analyzing data
+Loading data into a database
+Developing and implementing a QA process to validate transformed data against raw data
 
 ## Process
 ### Loading CSV tables into pgadmin
@@ -13,15 +18,33 @@ When loading CSV's into pgAdmin4:
 4) Set each column data type to an acceptable type (remember to adjust Length/scale to either 255 or 550)
 5) click save
 6) navigate to tables on the left hand menu
-7) right click your new table, and click import/export data 
+7) right click your new table, and click import/export data
+
+References:
+1) https://www.postgresqltutorial.com/postgresql-tutorial/import-csv-file-into-posgresql-table/ 
+2) https://www.youtube.com/watch?v=6Jf7eTkIaR4 
 
 ### Data Cleaning
+Data cleaning process
+dealing with null values
+Handle missing data - imputing missing values
+address outliers - remove outliers
+data normalization (changing data type)
+duplicate data
+data transformations
+
+###Nex steps
+startingwithquestions.md file
+startingwithdata.md file
+QA.md file
+schema.png file
 
 ## Results
 (fill in what you discovered this data could tell you and how you used the data to answer those questions)
 
 ## Challenges 
 (discuss challenges you faced in the project)
+-had a lot of challenges with importing the data, writing a query to import it effectively
 
 ## Future Goals
 (what would you do if you had more time?)
