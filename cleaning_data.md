@@ -1,26 +1,29 @@
 What issues will you address by cleaning the data?
 
-Steps
-dealing with null values
+Theory
+1)dealing with null values
 
-Handle missing data - imputing missing values
+2)Handle missing data - imputing missing values
 
-address outliers - remove outliers
+3)address outliers - remove outliers
 
-data normalization (changing data type)
+4) data normalization (changing data type)
 
-duplicate data
+5) duplicate data
 
-data transformations
+6)data transformations
 
-
-
-
+Process
 Step 1: Retrieve sample data
+
 Step 2: Explore unique values
+
 Step 3: View the value of orderdate and requireddate.
+
 Step 4: Identify missing and extreme values
+
 Step 5: Choose the best tool to proceed
+
 Step 6: Communicate your data-cleaning approach
 
 
