@@ -1,6 +1,6 @@
 What issues will you address by cleaning the data?
 
-Theory
+##Theory
 
 1) dealing with null values
 
@@ -15,7 +15,7 @@ Theory
 6) data transformations
 
 
-Process
+##Process
 
 Step 1: Retrieve sample data
 
