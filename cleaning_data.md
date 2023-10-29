@@ -31,10 +31,10 @@ Step 6: Communicate your data-cleaning approach
 
 
 
-Cleaning hint: The unit cost in the data needs to be divided by 1,000,000.
+##Cleaning hint: The unit cost in the data needs to be divided by 1,000,000.
 
 
-Queries:
+##Queries:
 Below, provide the SQL queries you used to clean your data.
 
 all_sessions2
