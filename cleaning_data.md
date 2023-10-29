@@ -190,53 +190,55 @@ ORDER BY UNITPRICE
 
 ## products
 ```
-look for null values
-SELECT * FROM products
-WHERE NOT(products it NOT NULL);
+-- PRODUCTS TABLE
+-- Look for null values
+SELECT *
+FROM products
+WHERE NOT (products IS NOT NULL);
 
-
--look for duplicate skus
+-- Look for duplicate skus
 SELECT sku, count()
 FROM products
 GROUP BY sku
-HAVING count()>1
+HAVING count() > 1
 
-TRIM sku and name columns for any extra space
--fill out with 0 null values from columns sentiment_score and sentiment_magnitude
--order table by sku
--create a view of the cleaned table
+-- TRIM sku and name columns for any extra space
+-- Fill out with 0 null values from columns sentiment_score and sentiment_magnitude
+-- Order table by sku
+-- Create a view of the cleaned table
+CREATE OR REPLACE VIEW working_products AS 
+    SELECT 
+        TRIM(sku) AS sku,
+        TRIM(name) AS product_name,
+        ordered_quantity,
+        stock_level,
+        restocking_lead_time,
+        CASE 
+            WHEN sentiment_score IS NULL THEN 0
+            ELSE sentiment_score
+        END AS sentiment_score,
+        CASE
+            WHEN sentiment_magnitude IS NULL THEN 0
+            ELSE sentiment_magnitude
+        END AS sentiment_magnitude
+    FROM products
+    ORDER BY sku;
 
-CREATE OR REPLACE VIEW working_products AS
-SELECT
-TRIM(sku) AS sku,
-TRIM(name) AS product_name,
-ordered_quantity,
-stock_level,
-restocking_lead_time
-CASE
-WHEN sentiment_score is NULL THEN 0
-ELSE sentiment_score
-END AS sentiment_score
-CASE
-WHEN sentiment_magnitude IS NULL THEN 0
-ELSE sentiment_magnitude
-END AS sentiment_magnitude
-FROM products
-ORDER BY sku:
-
--make an empty copy of original table
+-- Make an empty copy of the original table 
 CREATE TABLE clean_products AS
 TABLE products
 WITH NO DATA;
 
--insert clean data from the view table into the new clean table
+-- Insert clean data from the view table into the new clean table
 INSERT INTO clean_products
 SELECT * FROM working_products;
 
--Rename column name
+-- Rename column name
 ALTER TABLE clean_products
-RENAME COLUMN name to product_name;
+    RENAME COLUMN name TO product_name;
 ```
+
+
 
 ## sales_by_sku
 
