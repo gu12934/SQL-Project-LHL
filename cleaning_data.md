@@ -38,6 +38,79 @@ Step 6: Communicate your data-cleaning approach
 Below, provide the SQL queries you used to clean your data.
 
 all_sessions2
+```
+SELECT
+visitid,
+country,
+city,
+productsku,
+productprice
+--itemquantity col is nul, try to infer from productric and transactionrevenue
+(totaltransactionrevenue /  productprice)::INT AS itemquantity,
+ROUND(totaltransactionrevenue/ productprice,2) decimal_quantity,
+totaltransactionrevenue
+FROM
+all_sessions2
+WHERE totaltransactionrevenue IS NOT NULL
+ORDER BY visitid)
+
+-- leave null values null, update not null with decimal value
+UPDATE all_sessions2
+SET
+totaltransactionrevenue=
+CASE
+WHEN totaltransactionrevenue IS NULL THEN NULL
+ELSE (totalttransactionrevenue/1000000.0)::NUMERIC(10,2)
+END
+productprice=CASE
+WHEN productprice IS NULL THEN NULL
+ELSE(productprice/100000.0)::NUMERIC(10,2)
+END,
+productrevenue=
+CASE WHEN productrevenue IS NULL THEN NULL
+ELSE (prodcuctrevenue/1000000.0)::NUMERIC(10,2)
+END, transactionrevenue=CASE WHEN transactionrevenue IS NULL THEN NULL
+ELSE (transaction revenue/100000.0)::NUMERIC(10,2)
+
+
+
+--------------------------------------------------------------
+cleaning all_sessions 1
+
+SELECT DISTINCT country, city
+FROM all_sessions2
+GROUP BY country, city
+
+SELECT DISTINCT * 
+FROM all_sessions2
+WHERE country in ('(not set)')
+	OR city in ('(not set)','not available in demo dataset');
+
+DELETE from all_sessions2
+WHERE COUNTRY in ('(not set)')
+
+DELETE from all_sessions2
+WHERE city in ('not set)', 'not available in demo dataset')
+
+SELECT Distinct *
+FROM all_sessions2
+WHERE totaltransaction revenue is NULL
+
+cleaning all_sessions 2
+
+SELECT DISTINCT "time"
+FROM all_sessions2
+WHERE "time" is not NULL
+
+create temporary table all_sessions_temp
+AS 
+SELECT * from all_sessions2
+
+update all_sessions_temp
+SET "time" = TO_TIMESTAMP("time": double precision);
+
+-----------------------------------------------------------------
+```
 
 analytics
 
@@ -73,6 +146,54 @@ ORDER BY UNITPRICE
 ```
 
 products
+```
+look for null values
+SELECT * FROM products
+WHERE NOT(products it NOT NULL);
+
+
+-look for duplicate skus
+SELECT sku, count()
+FROM products
+GROUP BY sku
+HAVING count()>1
+
+TRIM sku and name columns for any extra space
+-fill out with 0 null values from columns sentiment_score and sentiment_magnitude
+-order table by sku
+-create a view of the cleaned table
+
+CREATE OR REPLACE VIEW working_products AS
+SELECT
+TRIM(sku) AS sku,
+TRIM(name) AS product_name,
+ordered_quantity,
+stock_level,
+restocking_lead_time
+CASE
+WHEN sentiment_score is NULL THEN 0
+ELSE sentiment_score
+END AS sentiment_score
+CASE
+WHEN sentiment_magnitude IS NULL THEN 0
+ELSE sentiment_magnitude
+END AS sentiment_magnitude
+FROM products
+ORDER BY sku:
+
+-make an empty copy of original table
+CREATE TABLE clean_products AS
+TABLE products
+WITH NO DATA;
+
+-insert clean data from the view table into the new clean table
+INSERT INTO clean_products
+SELECT * FROM working_products;
+
+-Rename column name
+ALTER TABLE clean_products
+RENAME COLUMN name to product_name;
+```
 
 sales_by_sku
 
