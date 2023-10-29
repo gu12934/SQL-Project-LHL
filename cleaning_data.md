@@ -1,6 +1,6 @@
 What issues will you address by cleaning the data?
 
-##Theory
+**Theory
 
 1) dealing with null values
 
@@ -15,7 +15,7 @@ What issues will you address by cleaning the data?
 6) data transformations
 
 
-##Process
+**Process
 
 Step 1: Retrieve sample data
 
@@ -31,10 +31,10 @@ Step 6: Communicate your data-cleaning approach
 
 
 
-##Cleaning hint: The unit cost in the data needs to be divided by 1,000,000.
+**Cleaning hint: The unit cost in the data needs to be divided by 1,000,000.
 
 
-##Queries:
+**Queries:
 Below, provide the SQL queries you used to clean your data.
 
 all_sessions2
