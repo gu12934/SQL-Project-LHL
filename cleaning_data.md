@@ -1,19 +1,22 @@
 What issues will you address by cleaning the data?
 
 Theory
-1)dealing with null values
 
-2)Handle missing data - imputing missing values
+1) dealing with null values
 
-3)address outliers - remove outliers
+2) Handle missing data - imputing missing values
+
+3) address outliers - remove outliers
 
 4) data normalization (changing data type)
 
 5) duplicate data
 
-6)data transformations
+6) data transformations
+
 
 Process
+
 Step 1: Retrieve sample data
 
 Step 2: Explore unique values
