@@ -41,6 +41,37 @@ all_sessions2
 
 analytics
 
+
+update analytics
+```
+ALTER TABLE analytics
+ALTER COLUMN unit_price TYPE DECIMAL;
+
+ALTER TABLE analytics
+RENAME COLUMN unit_price TO unitprice;
+
+UPDATE analytics
+SET unitprice=
+CASE
+WHEN unitprice iS NOT NULL THEN (unitprice/100000.0)::DECIMAL(10,2)
+ELSE unitprice
+END;
+
+conversion of data types
+SELECT *
+FROM sales_analytics
+JOIN sales_sessions USING
+(fullvisitorid)
+WHERE 
+productprice=sales
+OR productprice=unitprice
+OR revenue=totaltransactionrevenue
+
+SELECT * FROM analytics
+WHERE fullvisitorid='3758780440084540279'
+ORDER BY UNITPRICE
+```
+
 products
 
 sales_by_sku
