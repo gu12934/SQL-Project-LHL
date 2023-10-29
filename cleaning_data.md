@@ -37,7 +37,7 @@ Step 6: Communicate your data-cleaning approach
 ## Queries:
 Below, provide the SQL queries you used to clean your data.
 
-all_sessions2
+## all_sessions2
 ```
 SELECT
 visitid,
@@ -112,8 +112,51 @@ SET "time" = TO_TIMESTAMP("time": double precision);
 -----------------------------------------------------------------
 ```
 
-analytics
+```
+SELECT Customers.CustomerID, COUNT(*) AS TotalOrders
+FROM Customers
+INNER JOIN Orders ON Customers.CustomerID=Orders.CustomerID
+INNER JOIN Shippers ON Orders.ShipVia=Shippers.ShipperID
+WHERE Orders.ShipCountry='Germany'
+GROUP BY Customers.CustomerID
+HAVING COUNT(*) > 5
+ORDER BY TotalOrders DESC
+LIMIT 10;
 
+SELECT Customers.CustomerID, SUM(order_details.UnitPrice * order_details.Quantity) AS TotalOrders
+FROM Customers
+INNER JOIN Orders on Customers.CustomerID=Orders.CustomerID
+INNER JOIN order_details ON Orders.OrderId=order_details.OrderId
+GROUP BY Customers.CustomerID
+HAVING SUM(order_details.UnitPrice * order_details.Quantity) > 50000;
+
+SELECT EXTRACT(MONTH FROM Orders.OrderDate) AS OrderMonth, AVG(order_details.UnitPrice*order_details.Quantity) AS A AvgOrderValue
+FROM Orders
+INNER JOIN order_details ON Orders.OrderID=order_details.OrderID
+WHERE EXTRACT(YEAR FROM Orders.OrderDate)=1997
+GROUP BY EXTRACT(MONTH FROM Orders.OrderDate);
+
+SELECT Categories.CategoryName, SUM(order_details.UnitPrice * order_details.Quantity) AS TotalRevenue
+FROM Categories
+INNER JOIN Products ON Categories.CategoryID=Products.CategoryID
+INNER JOIN order_details ON Products.ProductID=order_details.ProductID
+GROUP BY Categories.CategoryName;
+
+
+SELECT Customers.CustomerID, SUM(order_details.UnitPrice * order_details.Quantity) AS TotalSales
+FROM Customers
+INNER JOIN Orders ON Customers.CustomerID=Orders.CustomerID
+INNER JOIN order_details ON Orders.OrderID=order_details.OrderID
+GROUP BY Customers.CustomerID;
+
+SELECT Customers.CustomerID, AVG(order_details.UnitPrice*order_details.Quantity) AS AvgOrderValue
+FROM Customers
+INNER JOIN Orders ON Customers.CustomerID=Orders.CustomerID
+INNER JOIN order_details ON Orders.OrderID=order_details.OrderID
+GROUP BY Customers.CustomerID;
+```
+
+## analytics
 
 update analytics
 ```
@@ -145,7 +188,7 @@ WHERE fullvisitorid='3758780440084540279'
 ORDER BY UNITPRICE
 ```
 
-products
+## products
 ```
 look for null values
 SELECT * FROM products
@@ -195,6 +238,6 @@ ALTER TABLE clean_products
 RENAME COLUMN name to product_name;
 ```
 
-sales_by_sku
+## sales_by_sku
 
-sales_report
+## sales_report
