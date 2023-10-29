@@ -190,6 +190,13 @@ ORDER BY UNITPRICE
 
 ## products
 ```
+SELECT COUNT(*) AS num_productsku, productsku,productname
+FROM product
+GROUP BY productksu, productname
+HAVING CONUT(*) >1
+```
+
+```
 -- PRODUCTS TABLE
 -- Look for null values
 SELECT *
