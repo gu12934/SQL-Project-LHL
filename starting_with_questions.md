@@ -48,10 +48,15 @@ GROUP BY all_sessions2.v2productcategory,all_sessions2.country, all_sessions2.ci
 ORDER BY product_category DESC;
 <img width="448" alt="image" src="https://github.com/gu12934/SQL-Project-LHL/assets/36687057/95f008a0-7026-47f0-8a13-b4ff51cf9425">
 
+SELECT country, city, "v2productcategory"::VARCHAR AS product_category, COUNT(*) AS category_count
+FROM all_sessions2
+GROUP BY country, city, "v2productcategory"
+ORDER BY category_count DESC;
 
 
 Answer:
 
+<img width="558" alt="image" src="https://github.com/gu12934/SQL-Project-LHL/assets/36687057/54ef6fab-0494-469c-8799-f2cd6f7298e4">
 
 
 
