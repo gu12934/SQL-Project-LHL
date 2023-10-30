@@ -5,14 +5,7 @@ Answer the following questions and provide the SQL queries used to find the answ
 
 
 SQL Queries:
-```
-SELECT
-country, SUM(total_transaction_revenue) AS total_transaction_revenue
-FROM all_sessions
-WHERE total_transaction_revenue !=0
-GROUP BY country
-GROUP BY total_transaction_revenue DESC;
-```
+
 
 ```
 SELECT
@@ -22,11 +15,8 @@ GROUP BY country, city
 ORDER BY total_transaction_revenue DESC
 ```
 
- SELECT countries, cities, sum(revenues) as revenue FROM table as s1  JOIN table as s2 ON s1.ID = s2.ID ORDER BY revenue desc
-
-
-
 Answer:
+<img width="369" alt="image" src="https://github.com/gu12934/SQL-Project-LHL/assets/36687057/9c97825e-d6c1-4906-a23b-040897010552">
 
 
 
