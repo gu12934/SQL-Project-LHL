@@ -61,6 +61,14 @@ WHERE country IN ('(not set)')
 ```
 <img width="230" alt="image" src="https://github.com/gu12934/SQL-Project-LHL/assets/36687057/7ae21ef6-b2a6-48cb-80ee-5a6e6dea1033">
 
+-delete rows with values in city column
+```
+DELETE FROM all_sessions2
+WHERE city in ('(not set)', 'not available in demo dataset')
+```
+<img width="230" alt="image" src="https://github.com/gu12934/SQL-Project-LHL/assets/36687057/c642fbb2-d8e4-46b3-8083-290032aeb1f4">
+
+
 
 ```
 SELECT
