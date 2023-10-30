@@ -104,30 +104,6 @@ ELSE (prodcuctrevenue/1000000.0)::NUMERIC(10,2)
 END, transactionrevenue=CASE WHEN transactionrevenue IS NULL THEN NULL
 ELSE (transaction revenue/100000.0)::NUMERIC(10,2)
 
-
-
---------------------------------------------------------------
-cleaning all_sessions 1
-
-SELECT DISTINCT country, city
-FROM all_sessions2
-GROUP BY country, city
-
-SELECT DISTINCT * 
-FROM all_sessions2
-WHERE country in ('(not set)')
-	OR city in ('(not set)','not available in demo dataset');
-
-DELETE from all_sessions2
-WHERE COUNTRY in ('(not set)')
-
-DELETE from all_sessions2
-WHERE city in ('not set)', 'not available in demo dataset')
-
-SELECT Distinct *
-FROM all_sessions2
-WHERE totaltransaction revenue is NULL
-
 cleaning all_sessions 2
 
 SELECT DISTINCT "time"
