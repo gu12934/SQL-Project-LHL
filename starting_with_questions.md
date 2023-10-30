@@ -94,6 +94,7 @@ ORDER BY category_count DESC;
 ## Question 5: Can we summarize the impact of revenue generated from each city/country?**
 
 SQL Queries:
+
 ```
 SELECT country, city, (all_sessions3.totaltransactionrevenue)::INTEGER AS total_revenue
 FROM all_sessions3
@@ -103,7 +104,19 @@ ORDER BY total_revenue DESC;
 
 
 Answer:
+
 <img width="326" alt="image" src="https://github.com/gu12934/SQL-Project-LHL/assets/36687057/2a385abf-fa83-41b1-a0dc-24d99d1a2446">
+
+```
+SELECT country, city, (all_sessions3.totaltransactionrevenue)::INTEGER AS total_revenue, SUM(CAST(productquantity AS INTEGER))
+FROM all_sessions3
+GROUP BY country, city, 3
+ORDER BY total_revenue DESC;
+```
+
+
+<img width="382" alt="image" src="https://github.com/gu12934/SQL-Project-LHL/assets/36687057/878fed4c-b6bb-409e-a004-acfe016ba941">
+
 
 
 
