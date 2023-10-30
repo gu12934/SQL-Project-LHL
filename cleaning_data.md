@@ -75,6 +75,13 @@ SET totaltransactionrevenue = COALESCE(CAST(all_sessions2.totaltransactionrevenu
 ```
 <img width="255" alt="image" src="https://github.com/gu12934/SQL-Project-LHL/assets/36687057/e4b2b382-7d4a-43dc-a832-0fe3e70c4b58">
 
+-coalesce the null values in product column
+```
+UPDATE all_sessions2
+SET productquantity = COALESCE(CAST(all_sessions2.productquantity AS integer), 0)
+```
+<img width="239" alt="image" src="https://github.com/gu12934/SQL-Project-LHL/assets/36687057/2be7fc09-f033-40bf-8244-5afdd4c09445">
+
 
 ```
 SELECT
