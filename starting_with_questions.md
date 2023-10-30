@@ -60,14 +60,7 @@ ORDER BY category_count DESC;
 
 <img width="558" alt="image" src="https://github.com/gu12934/SQL-Project-LHL/assets/36687057/54ef6fab-0494-469c-8799-f2cd6f7298e4">
 
-SELECT country, city, pagetitle, "v2productcategory"::VARCHAR AS product_category, COUNT(*) AS category_count
-FROM all_sessions2
-GROUP BY country, city,pagetitle, "v2productcategory"
-ORDER BY category_count DESC;
 
-<img width="612" alt="image" src="https://github.com/gu12934/SQL-Project-LHL/assets/36687057/de454a56-bea7-4eab-bfb4-ae2adc659e59">
-
-It seems that 103 items were bought from NEST USA
 
 
 ## Question 4: What is the top-selling product from each city/country? Can we find any pattern worthy of noting in the products sold?**
@@ -75,11 +68,18 @@ It seems that 103 items were bought from NEST USA
 
 SQL Queries:
 
+SELECT country, city, pagetitle, "v2productcategory"::VARCHAR AS product_category, COUNT(*) AS category_count
+FROM all_sessions2
+GROUP BY country, city,pagetitle, "v2productcategory"
+ORDER BY category_count DESC;
 
 
 Answer:
 
 
+<img width="612" alt="image" src="https://github.com/gu12934/SQL-Project-LHL/assets/36687057/de454a56-bea7-4eab-bfb4-ae2adc659e59">
+
+It seems that 103 items were bought from NEST USA
 
 
 
