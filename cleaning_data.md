@@ -38,6 +38,30 @@ Step 6: Communicate your data-cleaning approach
 Below, provide the SQL queries you used to clean your data.
 
 ## all_sessions2
+
+-identify missing values
+```
+SELECT DISTINCT country, city
+from all_sessions2
+group by country,city
+```
+
+-look at all countries
+```
+SELECT DISTINCT *
+from all_sessions2
+WHERE country IN('(not set)')
+OR City IN ('(not set)', 'not available in demo dataset');
+```
+
+-delete rows with non set values
+```
+DELETE from all_sessions2
+WHERE country IN ('(not set)')
+```
+<img width="230" alt="image" src="https://github.com/gu12934/SQL-Project-LHL/assets/36687057/7ae21ef6-b2a6-48cb-80ee-5a6e6dea1033">
+
+
 ```
 SELECT
 visitid,
