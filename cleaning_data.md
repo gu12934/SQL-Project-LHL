@@ -73,6 +73,7 @@ WHERE city in ('(not set)', 'not available in demo dataset')
 UPDATE all_sessions2
 SET totaltransactionrevenue = COALESCE(CAST(all_sessions2.totaltransactionrevenue AS integer), 0);
 ```
+<img width="255" alt="image" src="https://github.com/gu12934/SQL-Project-LHL/assets/36687057/e4b2b382-7d4a-43dc-a832-0fe3e70c4b58">
 
 
 ```
