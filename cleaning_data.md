@@ -68,6 +68,11 @@ WHERE city in ('(not set)', 'not available in demo dataset')
 ```
 <img width="230" alt="image" src="https://github.com/gu12934/SQL-Project-LHL/assets/36687057/c642fbb2-d8e4-46b3-8083-290032aeb1f4">
 
+-replace null values with 0 in total transaction revenue
+```
+UPDATE all_sessions2
+SET totaltransactionrevenue = COALESCE(CAST(all_sessions2.totaltransactionrevenue AS integer), 0);
+```
 
 
 ```
