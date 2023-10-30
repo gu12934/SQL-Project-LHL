@@ -26,9 +26,13 @@ Answer:
 
 SQL Queries:
 
-SELECT countries, cities, visitor average(productsOrdered) as averageProductOrdered FROM table as s1 JOIN table as s2 ON s1.ID=s2.ID ORDER BY averageProductOrdered desc
+SELECT country, city, AVG(all_sessions2.productquantity::INTEGER) AS avg_product
+FROM all_sessions2
+GROUP BY country, city 
+ORDER BY avg_product DESC;
 
 Answer:
+<img width="367" alt="image" src="https://github.com/gu12934/SQL-Project-LHL/assets/36687057/8fdb94b1-3afe-4252-9fd3-570d08107b93">
 
 
 
