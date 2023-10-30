@@ -42,6 +42,11 @@ Answer:
 
 
 SQL Queries:
+SELECT country, city, (all_sessions2.v2productcategory::VARCHAR) AS product_category 
+FROM all_sessions2 
+GROUP BY all_sessions2.v2productcategory,all_sessions2.country, all_sessions2.city
+ORDER BY product_category DESC;
+<img width="448" alt="image" src="https://github.com/gu12934/SQL-Project-LHL/assets/36687057/95f008a0-7026-47f0-8a13-b4ff51cf9425">
 
 
 
