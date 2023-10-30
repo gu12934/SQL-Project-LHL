@@ -72,15 +72,18 @@ SELECT country, city, pagetitle, "v2productcategory"::VARCHAR AS product_categor
 FROM all_sessions2
 GROUP BY country, city,pagetitle, "v2productcategory"
 ORDER BY category_count DESC;
-
-
-Answer:
-
-
 <img width="612" alt="image" src="https://github.com/gu12934/SQL-Project-LHL/assets/36687057/de454a56-bea7-4eab-bfb4-ae2adc659e59">
 
 It seems that 103 items were bought from NEST USA
 
+Answer:
+
+
+SELECT country, city, pagetitle, v2productname, "v2productcategory"::VARCHAR AS product_category, COUNT(*) AS category_count
+FROM all_sessions2
+GROUP BY country, city,pagetitle,v2productname, "v2productcategory"
+ORDER BY category_count DESC;
+<img width="607" alt="image" src="https://github.com/gu12934/SQL-Project-LHL/assets/36687057/bc708cf2-ab02-4517-ae49-24106483a6f9">
 
 
 ## Question 5: Can we summarize the impact of revenue generated from each city/country?**
