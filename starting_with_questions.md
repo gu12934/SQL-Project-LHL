@@ -14,6 +14,14 @@ GROUP BY country
 GROUP BY total_transaction_revenue DESC;
 ```
 
+```
+SELECT
+country,city, SUM(CAST(all_sessions2.totaltransactionrevenue AS integer)) AS total_transaction_revenue
+FROM all_sessions2
+GROUP BY country, city
+ORDER BY total_transaction_revenue DESC
+```
+
  SELECT countries, cities, sum(revenues) as revenue FROM table as s1  JOIN table as s2 ON s1.ID = s2.ID ORDER BY revenue desc
 
 
