@@ -51,7 +51,7 @@ Answer:
 
 
 
-**Question 4: What is the top-selling product from each city/country? Can we find any pattern worthy of noting in the products sold?**
+## Question 4: What is the top-selling product from each city/country? Can we find any pattern worthy of noting in the products sold?**
 
 
 SQL Queries:
@@ -64,7 +64,7 @@ Answer:
 
 
 
-**Question 5: Can we summarize the impact of revenue generated from each city/country?**
+## Question 5: Can we summarize the impact of revenue generated from each city/country?**
 
 SQL Queries:
 
