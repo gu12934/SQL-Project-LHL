@@ -39,15 +39,23 @@ startingwithdata.md file
 QA.md file
 schema.png file
 
+-Continue doing the data cleaning and adding more tables/joins to the project
+
 ## Results
+This data could tell me all about customer behaviour and which products are popular in which countres, i used the data to make these queries!
 (fill in what you discovered this data could tell you and how you used the data to answer those questions)
 
 ## Challenges 
 (discuss challenges you faced in the project)
--had a lot of challenges with importing the data, writing a query to import it effectively
+-had a lot of challenges with importing the data, writing a query to import it effectively at first
+-doing joins and connecting queries together
+-casting as integers
 
 ## Future Goals
 (what would you do if you had more time?)
+-more data cleaning
+-making a legend for the dataset and table of values
+-maybe doing predictive analytics down the line
 
 ## Rubric
 <img width="673" alt="image" src="https://github.com/gu12934/SQL-Project-LHL/assets/36687057/9ee3f52b-23b8-4f2e-a681-0a2d73b68949">
