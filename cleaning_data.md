@@ -89,6 +89,7 @@ SET transactionrevenue = COALESCE(CAST(all_sessions2.transactionrevenue AS integ
 ```
 <img width="235" alt="image" src="https://github.com/gu12934/SQL-Project-LHL/assets/36687057/15b742d1-fd82-479a-b955-53351e385255">
 
+-cleaning query checking as numeric values
 ```
 SELECT
   visitid,
@@ -114,40 +115,30 @@ WHERE
 ORDER BY
   visitid;
 ```
-
+-putting null values divisible by 1000
 ```
-SELECT
-visitid,
-country,
-city,
-productsku,
-productprice
---itemquantity col is nul, try to infer from productric and transactionrevenue
-(totaltransactionrevenue /  productprice)::INT AS itemquantity,
-ROUND(totaltransactionrevenue/ productprice,2) decimal_quantity,
-totaltransactionrevenue
-FROM
-all_sessions2
-WHERE totaltransactionrevenue IS NOT NULL
-ORDER BY visitid)
-
--- leave null values null, update not null with decimal value
 UPDATE all_sessions2
 SET
-totaltransactionrevenue=
-CASE
-WHEN totaltransactionrevenue IS NULL THEN NULL
-ELSE (totalttransactionrevenue/1000000.0)::NUMERIC(10,2)
-END
-productprice=CASE
-WHEN productprice IS NULL THEN NULL
-ELSE(productprice/100000.0)::NUMERIC(10,2)
-END,
-productrevenue=
-CASE WHEN productrevenue IS NULL THEN NULL
-ELSE (prodcuctrevenue/1000000.0)::NUMERIC(10,2)
-END, transactionrevenue=CASE WHEN transactionrevenue IS NULL THEN NULL
-ELSE (transaction revenue/100000.0)::NUMERIC(10,2)
+  totaltransactionrevenue = CASE
+    WHEN totaltransactionrevenue IS NULL THEN NULL
+    ELSE (CAST(totaltransactionrevenue AS NUMERIC) / 1000000.0)::NUMERIC(10,2)
+  END,
+  productprice = CASE
+    WHEN productprice IS NULL THEN NULL
+    ELSE (CAST(productprice AS NUMERIC) / 1000000.0)::NUMERIC(10,2)
+  END,
+  productrevenue = CASE
+    WHEN productrevenue IS NULL THEN NULL
+    ELSE (CAST(productrevenue AS NUMERIC) / 1000000.0)::NUMERIC(10,2)
+  END,
+  transactionrevenue = CASE
+    WHEN transactionrevenue IS NULL THEN NULL
+    ELSE (CAST(transactionrevenue AS NUMERIC) / 1000000.0)::NUMERIC(10,2)
+  END;
+```
+
+
+```
 
 cleaning all_sessions 2
 
@@ -162,7 +153,6 @@ SELECT * from all_sessions2
 update all_sessions_temp
 SET "time" = TO_TIMESTAMP("time": double precision);
 
------------------------------------------------------------------
 ```
 
 ```
