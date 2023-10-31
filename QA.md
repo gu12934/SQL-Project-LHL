@@ -1,7 +1,9 @@
 ## What are your risk areas? Identify and describe them.
 
 complete (i.e. no blank or null values)
+
 unique (i.e. no duplicate values)
+
 consistent with what we expect (eg. a decimal between a certain range)
 
 
