@@ -16,7 +16,7 @@ Include the answer to each question and the accompanying queries used to obtain 
 
 - compute the percentage of visitors to the site that actually makes a purchase
 
-Question 1:  
+## Question 1:  
 
 - find the total number of unique visitors (fullVisitorID)
 
@@ -31,7 +31,7 @@ Answer:
 
 
 
-Question 2: 
+## Question 2: 
 
 - find each unique product viewed by each visitor
 
@@ -46,7 +46,7 @@ Answer:
 
 
 
-Question 3: 
+## Question 3: 
 
 SQL Queries:
 
