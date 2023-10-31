@@ -8,9 +8,7 @@ Include the answer to each question and the accompanying queries used to obtain 
 
 - compute the percentage of visitors to the site that actually makes a purchase
 
-## Question 1:  
-
-- find the total number of unique visitors (fullVisitorID)
+## Question 1:  find the total number of unique visitors (fullVisitorID)
 
 
 SQL Queries:
@@ -23,9 +21,7 @@ Answer:
 
 
 
-## Question 2: 
-
-- find each unique product viewed by each visitor
+## Question 2:  find each unique product viewed by each visitor
 
 SQL Queries:
 SELECT fullVisitorId, v2ProductName
@@ -38,8 +34,7 @@ Answer:
 
 
 
-## Question 3: 
--find all duplicate records
+## Question 3: find all duplicate records
 
 SQL Queries:
 
