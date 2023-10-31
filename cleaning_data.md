@@ -89,6 +89,31 @@ SET transactionrevenue = COALESCE(CAST(all_sessions2.transactionrevenue AS integ
 ```
 <img width="235" alt="image" src="https://github.com/gu12934/SQL-Project-LHL/assets/36687057/15b742d1-fd82-479a-b955-53351e385255">
 
+```
+SELECT
+  visitid,
+  country,
+  city,
+  productsku,
+  productprice,
+  CASE
+    WHEN CAST(productprice AS numeric) <> 0
+    THEN (CAST(totaltransactionrevenue AS numeric) / CAST(productprice AS numeric))::INT
+    ELSE NULL
+  END AS itemquantity,
+  CASE
+    WHEN CAST(productprice AS numeric) <> 0
+    THEN ROUND(CAST(totaltransactionrevenue AS numeric) / CAST(productprice AS numeric), 2)
+    ELSE NULL
+  END AS decimal_quantity,
+  totaltransactionrevenue
+FROM
+  all_sessions3
+WHERE
+  totaltransactionrevenue IS NOT NULL
+ORDER BY
+  visitid;
+```
 
 ```
 SELECT
