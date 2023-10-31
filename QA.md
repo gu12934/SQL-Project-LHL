@@ -1,9 +1,11 @@
-What are your risk areas? Identify and describe them.
+## What are your risk areas? Identify and describe them.
+
+complete (i.e. no blank or null values)
+unique (i.e. no duplicate values)
+consistent with what we expect (eg. a decimal between a certain range)
 
 
-
-
-QA Process:
+## QA Process:
 Describe your QA process and include the SQL queries used to execute it.
 
 
