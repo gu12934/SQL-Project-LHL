@@ -3,10 +3,10 @@
 ## Project/Goals
 In this project, we will combine and practice implementing what we have learned throughout this course, including:
 
-Extracting data from a SQL database
-Cleaning, transforming and analyzing data
-Loading data into a database
-Developing and implementing a QA process to validate transformed data against raw data
+* Extracting data from a SQL database
+* Cleaning, transforming and analyzing data
+* Loading data into a database
+* Developing and implementing a QA process to validate transformed data against raw data
 
 ## Process
 ### Loading CSV tables into pgadmin
@@ -25,19 +25,19 @@ References:
 2) https://www.youtube.com/watch?v=6Jf7eTkIaR4 
 
 ### Data Cleaning
-Data cleaning process
-dealing with null values
-Handle missing data - imputing missing values
-address outliers - remove outliers
-data normalization (changing data type)
-duplicate data
-data transformations
+* Data cleaning process
+* dealing with null values
+* Handle missing data - imputing missing values
+* address outliers - remove outliers
+* data normalization (changing data type)
+* duplicate data
+* data transformations
 
 ### Next steps
-startingwithquestions.md file
-startingwithdata.md file
-QA.md file
-schema.png file
+* startingwithquestions.md file
+* startingwithdata.md file
+* QA.md file
+* schema.png file
 
 -Continue doing the data cleaning and adding more tables/joins to the project
 
@@ -47,15 +47,18 @@ This data could tell me all about customer behaviour and which products are popu
 
 ## Challenges 
 (discuss challenges you faced in the project)
--had a lot of challenges with importing the data, writing a query to import it effectively at first
--doing joins and connecting queries together
--casting as integers
+* had a lot of challenges with importing the data, writing a query to import it effectively at first
+* doing joins and connecting queries together
+* casting as integers
 
 ## Future Goals
 (what would you do if you had more time?)
--more data cleaning
--making a legend for the dataset and table of values
--maybe doing predictive analytics down the line
+* more data cleaning
+* making a legend for the dataset and table of values
+* maybe doing predictive analytics down the line
+
+## Project Presentation
+* https://docs.google.com/presentation/d/17vUFTBp6rq80fNdA5jdDX8FNj_PqUAQxWrnVqPet5Sk/edit
 
 ## Rubric
 <img width="673" alt="image" src="https://github.com/gu12934/SQL-Project-LHL/assets/36687057/9ee3f52b-23b8-4f2e-a681-0a2d73b68949">
