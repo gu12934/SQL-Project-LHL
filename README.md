@@ -1,6 +1,6 @@
 # Final-Project-Transforming-and-Analyzing-Data-with-SQL
 ![image](https://github.com/gu12934/SQL-Project-LHL/assets/36687057/695667bf-9427-4f5c-a39a-52dea437b544)
-
+***
 ## Project/Goals
 In this project, we will combine and practice implementing what we have learned throughout this course, including:
 
@@ -8,7 +8,7 @@ In this project, we will combine and practice implementing what we have learned 
 * Cleaning, transforming and analyzing data
 * Loading data into a database
 * Developing and implementing a QA process to validate transformed data against raw data
-
+***
 ## Process
 ### Loading CSV tables into pgadmin
 
@@ -24,7 +24,7 @@ When loading CSV's into pgAdmin4:
 References:
 1) https://www.postgresqltutorial.com/postgresql-tutorial/import-csv-file-into-posgresql-table/ 
 2) https://www.youtube.com/watch?v=6Jf7eTkIaR4 
-
+***
 ### Data Cleaning
 * Data cleaning process
 * dealing with null values
@@ -33,7 +33,7 @@ References:
 * data normalization (changing data type)
 * duplicate data
 * data transformations
-
+***
 ### Next steps
 * startingwithquestions.md file
 * startingwithdata.md file
@@ -41,17 +41,17 @@ References:
 * schema.png file
 
 -Continue doing the data cleaning and adding more tables/joins to the project
-
+***
 ## Results
 This data could tell me all about customer behaviour and which products are popular in which countres, i used the data to make these queries!
 (fill in what you discovered this data could tell you and how you used the data to answer those questions)
-
+***
 ## Challenges 
 (discuss challenges you faced in the project)
 * had a lot of challenges with importing the data, writing a query to import it effectively at first
 * doing joins and connecting queries together
 * casting as integers
-
+***
 ## Future Goals
 (what would you do if you had more time?)
 * more data cleaning
