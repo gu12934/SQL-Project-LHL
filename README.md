@@ -1,4 +1,5 @@
 # Final-Project-Transforming-and-Analyzing-Data-with-SQL
+![image](https://github.com/gu12934/SQL-Project-LHL/assets/36687057/695667bf-9427-4f5c-a39a-52dea437b544)
 
 ## Project/Goals
 In this project, we will combine and practice implementing what we have learned throughout this course, including:
