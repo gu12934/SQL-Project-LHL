@@ -24,9 +24,8 @@ Answer:
 
 
 ## Question 2:  find each unique product viewed by each visitor
-
-```
 SQL Queries:
+```
 SELECT fullVisitorId, v2ProductName
 FROM all_sessions3
 GROUP BY fullVisitorId, v2ProductName;
