@@ -63,8 +63,9 @@ References:
 ## Results
 * This data could tell me all about customer behaviour and which products are popular in which countres, i used the data to make these queries!
 * The data helped me to answer various questions about inventories and tracking
-* [a relative link](https://github.com/gu12934/SQL-Project-LHL/blob/main/md_files/starting_with_questions.md)
-* [a relative link](https://github.com/gu12934/SQL-Project-LHL/blob/main/md_files/starting_with_data.md)
+* [questions file](https://github.com/gu12934/SQL-Project-LHL/blob/main/md_files/starting_with_questions.md)
+* [data exploration](https://github.com/gu12934/SQL-Project-LHL/blob/main/md_files/starting_with_data.md)
+* [QA file](https://github.com/gu12934/SQL-Project-LHL/blob/main/md_files/QA.md)
 ***
 ## Challenges 
 
