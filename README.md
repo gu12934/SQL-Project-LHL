@@ -37,7 +37,7 @@ schema.png file
 ### Loading CSV tables into pgadmin
 
 When loading CSV's into pgAdmin4:
-* 1) right click your public schema. Click Create > Table
+1) right click your public schema. Click Create > Table
 2) In the General Tab, name your new table the same as your CSV(i.e. all_sessions)
 3) In the columns tab, create each column from your CSV file in the exact order it appears
 4) Set each column data type to an acceptable type (remember to adjust Length/scale to either 255 or 550)
@@ -46,7 +46,7 @@ When loading CSV's into pgAdmin4:
 7) right click your new table, and click import/export data
 
 After data is loaded
-* 1) conduct sql queries on relevant files and screenshot the results into the project
+1) conduct sql queries on relevant files and screenshot the results into the project
 ***
 References:
 1) https://www.postgresqltutorial.com/postgresql-tutorial/import-csv-file-into-posgresql-table/ 
