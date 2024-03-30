@@ -36,8 +36,8 @@ schema.png file
 ## Process
 ### Loading CSV tables into pgadmin
 
-* When loading CSV's into pgAdmin4:
-1) right click your public schema. Click Create > Table
+When loading CSV's into pgAdmin4:
+* 1) right click your public schema. Click Create > Table
 2) In the General Tab, name your new table the same as your CSV(i.e. all_sessions)
 3) In the columns tab, create each column from your CSV file in the exact order it appears
 4) Set each column data type to an acceptable type (remember to adjust Length/scale to either 255 or 550)
@@ -45,7 +45,7 @@ schema.png file
 6) navigate to tables on the left hand menu
 7) right click your new table, and click import/export data
 
-* After data is loaded
+After data is loaded
 * 1) conduct sql queries on relevant files and screenshot the results into the project
 ***
 References:
@@ -65,7 +65,7 @@ References:
 * The data helped me to answer various questions about inventories and tracking
 ***
 ## Challenges 
-(discuss challenges you faced in the project)
+
 * had a lot of challenges with importing the data, writing a query to import it effectively at first
 * doing joins and connecting queries together
 * casting as integers
