@@ -17,6 +17,7 @@ SELECT COUNT(DISTINCT fullVisitorId) AS total_unique_visitors
 FROM public.all_sessions3;
 
 Answer: 
+
 <img width="161" alt="image" src="https://github.com/gu12934/SQL-Project-LHL/assets/36687057/33e19344-f121-44b2-be24-9f1b1401f338">
 
 
@@ -30,6 +31,7 @@ GROUP BY fullVisitorId, v2ProductName;
 
 
 Answer:
+
 <img width="412" alt="image" src="https://github.com/gu12934/SQL-Project-LHL/assets/36687057/443d6aae-be28-4657-9f4e-03d3b5d84658">
 
 
@@ -45,6 +47,7 @@ HAVING COUNT(*) > 1;
 
 
 Answer:
+
 <img width="321" alt="image" src="https://github.com/gu12934/SQL-Project-LHL/assets/36687057/3bc23a84-d061-4585-b08e-1e2927a83a52">
 
 
