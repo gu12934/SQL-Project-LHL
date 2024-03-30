@@ -12,26 +12,26 @@ In this project, we will combine and practice implementing what we have learned 
 ## Files that were used
 
 ***
-* README.md file
-This file should be an overview of your project, covering roughly the same points as your presentation
+README.md file
+* This file should be an overview of your project, covering roughly the same points as your presentation
 
-* cleaning_data.md file
-Fill out this file with a description of the issues that will be addressed by cleaning the data
+cleaning_data.md file
+* Fill out this file with a description of the issues that will be addressed by cleaning the data
 Include the queries used to clean the data
 
-* startingwithquestions.md file
-Provide the answer to the 5 questions and the queries used to answer each question
+startingwithquestions.md file
+* Provide the answer to the 5 questions and the queries used to answer each question
 startingwithdata.md file
 Provide the 3 - 5 new questions you decided could be answered with the data
 Include the answer to each question and the accompanying queries used to obtain the answer
 
-* QA.md file
-Identify and describe your risk areas
+QA.md file
+* Identify and describe your risk areas
 Develop and execute a QA process to address the risk areas identified, providing the SQL queries used to implement
 
-* schema.png file
-This file should contain the ERD of the database
-Presentation Guidelines
+schema.png file
+* This file should contain the ERD of the database
+
 ***
 ## Process
 ### Loading CSV tables into pgadmin
