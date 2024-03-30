@@ -1,7 +1,7 @@
 # Final-Project-Transforming-and-Analyzing-Data-with-SQL
 ![image](https://github.com/gu12934/SQL-Project-LHL/assets/36687057/695667bf-9427-4f5c-a39a-52dea437b544)
 ***
-## Project/Goals
+## Project/Goals🎈
 In this project, we will combine and practice implementing what we have learned throughout this course, including:
 
 * Extracting data from a SQL database
@@ -9,7 +9,7 @@ In this project, we will combine and practice implementing what we have learned 
 * Loading data into a database
 * Developing and implementing a QA process to validate transformed data against raw data
 ***
-## Files that were used
+## Files Used📁
 
 ***
 README.md file
@@ -33,7 +33,7 @@ schema.png file
 * This file should contain the ERD of the database
 
 ***
-## Process
+## Process⏩
 ### Loading CSV tables into pgadmin
 
 When loading CSV's into pgAdmin4:
@@ -52,7 +52,7 @@ References:
 1) https://www.postgresqltutorial.com/postgresql-tutorial/import-csv-file-into-posgresql-table/ 
 2) https://www.youtube.com/watch?v=6Jf7eTkIaR4 
 ***
-### Data Cleaning
+### Data Cleaning🧼
 * dealing with null values, getting rid of them
 * Handle missing data - imputing missing values
 * address outliers - remove outliers
@@ -60,25 +60,25 @@ References:
 * duplicate data
 * data transformations
 ***
-## Results
+## Results🔍
 * This data could tell me all about customer behaviour and which products are popular in which countres, i used the data to make these queries!
 * The data helped me to answer various questions about inventories and tracking
 * [questions file](https://github.com/gu12934/SQL-Project-LHL/blob/main/sql_files/starting_with_questions.md)
 * [data exploration](https://github.com/gu12934/SQL-Project-LHL/blob/main/md_files/starting_with_data.md)
 * [QA file](https://github.com/gu12934/SQL-Project-LHL/blob/main/md_files/QA.md)
 ***
-## Challenges 
+## Challenges🎱
 
 * had a lot of challenges with importing the data, writing a query to import it effectively at first
 * doing joins and connecting queries together
 * casting as integers
 * 
 ***
-## Future Goals
+## Future Goals🥅
 * more data cleaning and joining with other tables
 * making a legend for the dataset and table of values
 * maybe doing predictive analytics down the line
 
-## Project Presentation
+## Project Presentation🌠
 * https://docs.google.com/presentation/d/17vUFTBp6rq80fNdA5jdDX8FNj_PqUAQxWrnVqPet5Sk/edit
 
